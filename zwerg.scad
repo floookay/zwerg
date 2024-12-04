@@ -27,6 +27,7 @@ BOTTOM_OFFSET = 5;
 // projection() translate([0,0,-PLATE_THICKNESS]) plate();
 // projection() translate([0,0,-PLATE_THICKNESS-5]) pcb();
 
+//translate([0,0,-PLATE_THICKNESS]) plate();
 //translate([0,0,-PLATE_THICKNESS-5]) color("green") pcb();
 
 case();
@@ -99,8 +100,8 @@ module pcb() {
         // translate([6*KEY_UNIT, 0.75*KEY_UNIT, 0]) rotate([0,0,-ANGLE]) translate([-2*KEY_UNIT+PCB_OFFSET,-1.75*KEY_UNIT+PCB_OFFSET,0]) cube_rounded([4*KEY_UNIT-2*PCB_OFFSET,1.75*KEY_UNIT-2*PCB_OFFSET,PCB_THICKNESS]);
         translate([6*KEY_UNIT, 0.75*KEY_UNIT, 0]) rotate([0,0,-ANGLE])
         translate([-2*KEY_UNIT+PCB_OFFSET,-1.75*KEY_UNIT+PCB_OFFSET,0])
-        translate([0,(1.75-1.25)*KEY_UNIT/2,0])
-        cube_rounded([4*KEY_UNIT-2*PCB_OFFSET,1.25*KEY_UNIT-2*PCB_OFFSET,PCB_THICKNESS]);
+        translate([0,(1.75-1.75)*KEY_UNIT/2,0])
+        cube_rounded([4*KEY_UNIT-2*PCB_OFFSET,1.75*KEY_UNIT-2*PCB_OFFSET,PCB_THICKNESS]);
     }
 }
 
