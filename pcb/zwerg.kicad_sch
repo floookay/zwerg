@@ -2219,28 +2219,6 @@
 			)
 		)
 	)
-	(global_label "tx"
-		(shape input)
-		(at 78.74 73.66 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "80c9b1b9-e057-4acd-92fe-3bc1c8183b1d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 78.74 78.399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "col5"
 		(shape input)
 		(at 137.16 91.44 90)
@@ -2483,28 +2461,6 @@
 			)
 		)
 	)
-	(global_label "tx"
-		(shape input)
-		(at 153.67 73.66 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ed705512-5797-42e1-9c44-dbb4afedd726")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 158.409 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "col2"
 		(shape input)
 		(at 93.98 60.96 0)
@@ -2733,7 +2689,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 109.22 147.32 0)
 			(effects
 				(font
@@ -2887,7 +2843,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 71.12 134.62 0)
 			(effects
 				(font
@@ -3176,7 +3132,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 96.52 121.92 0)
 			(effects
 				(font
@@ -3466,7 +3422,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 121.92 147.32 0)
 			(effects
 				(font
@@ -3552,7 +3508,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 134.62 160.02 0)
 			(effects
 				(font
@@ -3638,7 +3594,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_marbastlib-xp-promicroish:RP2040-Matrix_AC"
+		(property "Footprint" "zwerg:RP2040-Matrix_fb"
 			(at 81.28 90.17 0)
 			(effects
 				(font
@@ -4041,7 +3997,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 121.92 160.02 0)
 			(effects
 				(font
@@ -4195,7 +4151,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 71.12 147.32 0)
 			(effects
 				(font
@@ -4349,7 +4305,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 83.82 121.92 0)
 			(effects
 				(font
@@ -4435,7 +4391,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 83.82 134.62 0)
 			(effects
 				(font
@@ -4490,6 +4446,70 @@
 			(project "zwerg"
 				(path "/fe8df7b9-368d-4c77-a717-5363f47564e5"
 					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 114.3 67.31 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a603af7-a697-4f21-83b5-ec3cf047fc37")
+		(property "Reference" "H6"
+			(at 116.84 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 116.84 68.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 114.3 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "zwerg"
+				(path "/fe8df7b9-368d-4c77-a717-5363f47564e5"
+					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -4589,7 +4609,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 96.52 109.22 0)
 			(effects
 				(font
@@ -4677,7 +4697,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 114.3 59.69 0)
 			(effects
 				(font
@@ -4739,7 +4759,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 134.62 134.62 0)
 			(effects
 				(font
@@ -4827,7 +4847,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 114.3 46.99 0)
 			(effects
 				(font
@@ -4889,7 +4909,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 109.22 134.62 0)
 			(effects
 				(font
@@ -4975,7 +4995,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 96.52 134.62 0)
 			(effects
 				(font
@@ -5267,7 +5287,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 114.3 53.34 0)
 			(effects
 				(font
@@ -5397,7 +5417,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 121.92 121.92 0)
 			(effects
 				(font
@@ -5483,7 +5503,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 71.12 109.22 0)
 			(effects
 				(font
@@ -5569,7 +5589,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 121.92 109.22 0)
 			(effects
 				(font
@@ -5729,7 +5749,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 83.82 109.22 0)
 			(effects
 				(font
@@ -5815,7 +5835,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 96.52 147.32 0)
 			(effects
 				(font
@@ -5971,7 +5991,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 114.3 40.64 0)
 			(effects
 				(font
@@ -6033,7 +6053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 71.12 121.92 0)
 			(effects
 				(font
@@ -6121,7 +6141,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 114.3 34.29 0)
 			(effects
 				(font
@@ -6251,7 +6271,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 121.92 134.62 0)
 			(effects
 				(font
@@ -6405,7 +6425,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 83.82 147.32 0)
 			(effects
 				(font
@@ -6491,7 +6511,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 109.22 121.92 0)
 			(effects
 				(font
@@ -6712,7 +6732,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 134.62 109.22 0)
 			(effects
 				(font
@@ -6798,7 +6818,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 134.62 121.92 0)
 			(effects
 				(font
@@ -6952,7 +6972,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:D3_TH_SMD"
+		(property "Footprint" "zwerg:D3_TH_SMD"
 			(at 109.22 109.22 0)
 			(effects
 				(font

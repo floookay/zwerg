@@ -1,0 +1,4 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D3, D4, D5, D6, D7, D8, D9",D3_TH_SMD,25,D_45deg,
+J1,CON_MJ-4PP-9_Reversible,1,AudioJack4,
+"MX1, MX10, MX11, MX12, MX13, MX14, MX15, MX16, MX17, MX18, MX19, MX2, MX20, MX21, MX22, MX23, MX24, MX25, MX3, MX4, MX5, MX6, MX7, MX8, MX9",SW_MX_Reversible_1u,25,MX_SW_HS,
