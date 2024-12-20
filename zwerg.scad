@@ -22,7 +22,7 @@ PCB_OFFSET = 1;
 PCB_HEIGHT_OFFSET = -5;
 PCB_CLEARANCE = 2.4;
 PCB_PIN = 4;
-PCB_PIN_3DP = 3.8;
+PCB_PIN_3DP = 4;
 PCB_SCREW = 2.2;
 PCB_SCREW_3DP = 2.9;
 ORING_THICKNESS = 1.9;  // 2.4
@@ -34,8 +34,8 @@ BOTTOM_OFFSET = 5;
 // projection() translate([0,0,-PLATE_THICKNESS]) plate();
 // projection() translate([0,0,-PLATE_THICKNESS-5]) pcb();
 
-//translate([0,0,-PLATE_THICKNESS]) plate();
-//translate([0,0,-PCB_THICKNESS-5]) color("green") pcb(true);
+translate([0,0,-PLATE_THICKNESS]) plate();
+translate([0,0,-PCB_THICKNESS-5]) color("green") pcb(true);
 
 case();
 
@@ -60,18 +60,24 @@ module case() {
 
         // trrs
         translate([6*KEY_UNIT, 0.75*KEY_UNIT, 0]) rotate([0,0,-ANGLE]) translate([1*KEY_UNIT,-0.5*KEY_UNIT,0])
-        translate([0,0,-(PCB_CLEARANCE+PCB_THICKNESS-PCB_HEIGHT_OFFSET)]) rotate([-90,0,0]) translate([-1,0,-3]) hull() {
-            cylinder(h = 30, r = 3);
-            translate([2,0,0]) cylinder(h = 30, r = 3);
+        translate([0,0,-(PCB_CLEARANCE+PCB_THICKNESS-PCB_HEIGHT_OFFSET)]) rotate([-90,0,0]) translate([-1,0,-4.2]) union() {
+            hull() {
+                cylinder(h = 30, r = 3);
+                translate([2,0,0]) cylinder(h = 30, r = 3);
+            }
+            hull() {
+                cylinder(h = 14.7, r = 4);
+                translate([2,0,0]) cylinder(h = 14.7, r = 4);
+            }
         }
 
         // rp2040
-        translate([6*KEY_UNIT, 0.75*KEY_UNIT, 0]) rotate([0,0,-ANGLE]) translate([0,-0.5*KEY_UNIT,0])
+        translate([6*KEY_UNIT, 0.75*KEY_UNIT, 0]) rotate([0,0,-ANGLE]) translate([-6,-0.5*KEY_UNIT,0])
         translate([0,0,-(PCB_CLEARANCE+PCB_THICKNESS-PCB_HEIGHT_OFFSET)]) rotate([-90,0,0]) union() {
             translate([1.5,-1,-3]) cube_rounded([20,5,25],r=1,center=true);
             translate([-1,0,-3]) hull() {
-                cylinder(h = 40, r = 4);
-                translate([5,0,0]) cylinder(h = 40, r = 4);
+                cylinder(h = 100, r = 4);
+                translate([5,0,0]) cylinder(h = 100, r = 4);
             }
         }
     }
@@ -123,6 +129,7 @@ module plate_main(solid=false) {
                 }
             }
         }
+        translate([5.5*KEY_UNIT,0,-1]) cube([KEY_UNIT/2,KEY_UNIT/2,PLATE_THICKNESS+2]);
     }
 }
 module plate_thumbs(solid=false) {
@@ -131,7 +138,10 @@ module plate_thumbs(solid=false) {
         rotate([0,0,-ANGLE]) translate([-2*KEY_UNIT,-1.75*KEY_UNIT,0]) cube([4*KEY_UNIT,1.75*KEY_UNIT,PLATE_THICKNESS]);
         if(!solid)
         {
-            plate_main(solid=true);
+            difference() {
+                translate([0,0,-1]) cube([6*KEY_UNIT,4*KEY_UNIT,PLATE_THICKNESS+2]);
+                translate([5.5*KEY_UNIT,0,-2]) cube([KEY_UNIT/2,KEY_UNIT/2,PLATE_THICKNESS+4]);
+            }
             translate([6*KEY_UNIT, 0.75*KEY_UNIT, 0])
             rotate([0,0,-ANGLE]) translate([-2*KEY_UNIT,-1.75*KEY_UNIT,0]) union() {
                 translate([2*KEY_UNIT,0.75*KEY_UNIT/2,0]) hole();
@@ -142,9 +152,12 @@ module plate_thumbs(solid=false) {
 }
 
 module plate() {
-    union() {
-        plate_main();
-        plate_thumbs();
+    difference() {
+        union() {
+            plate_main();
+            plate_thumbs();
+        }
+        translate([3.5*KEY_UNIT, 1.5*KEY_UNIT,0]) hole();
     }
 }
 module hole() {
