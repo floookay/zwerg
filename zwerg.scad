@@ -34,8 +34,8 @@ BOTTOM_OFFSET = 5;
 // projection() translate([0,0,-PLATE_THICKNESS]) plate();
 // projection() translate([0,0,-PLATE_THICKNESS-5]) pcb();
 
-translate([0,0,-PLATE_THICKNESS]) plate();
-translate([0,0,-PCB_THICKNESS-5]) color("green") pcb(true);
+// translate([0,0,-PLATE_THICKNESS]) plate();
+// translate([0,0,-PCB_THICKNESS-5]) color("green") pcb(true);
 
 case();
 
@@ -53,7 +53,7 @@ module case() {
                 translate([0,0,-CASE_HEIGHT]) linear_extrude(0.2) offset(CASE_BOTTOM_RIM_WIDTH) projection() plate_thumbs(solid=true);
             }
         }
-        translate([-CASE_RIM_WIDTH,0,-SPACING_INSIDE,]) rotate(CASE_ANGLE) translate(v = [0,-200,-200]) cube([400,400,200]);
+        translate([-CASE_RIM_WIDTH,0,-SPACING_INSIDE]) rotate(CASE_ANGLE) translate(v = [0,-200,-200]) cube([400,400,200]);
         translate([0,0,-SPACING_INSIDE]) linear_extrude(20) offset() projection() plate_main(solid=true);
         translate([0,0,-SPACING_INSIDE]) linear_extrude(20) offset() projection() plate_thumbs(solid=true);
         translate([0,0,PCB_HEIGHT_OFFSET-PCB_THICKNESS-PCB_CLEARANCE]) translate([4*KEY_UNIT, 2*KEY_UNIT, -2]) cylinder(h=20,r=(PCB_SCREW_3DP)/2);
@@ -69,6 +69,10 @@ module case() {
                 cylinder(h = 14.7, r = 4);
                 translate([2,0,0]) cylinder(h = 14.7, r = 4);
             }
+            translate(v = [0,0,16]) hull() {
+                cylinder(h = 30, r = 4.5);
+                translate([2,0,0]) cylinder(h = 30, r = 4.5);
+            }
         }
 
         // rp2040
@@ -76,9 +80,17 @@ module case() {
         translate([0,0,-(PCB_CLEARANCE+PCB_THICKNESS-PCB_HEIGHT_OFFSET)]) rotate([-90,0,0]) union() {
             translate([1.5,-1,-3]) cube_rounded([20,5,25],r=1,center=true);
             translate([-1,0,-3]) hull() {
-                cylinder(h = 100, r = 4);
-                translate([5,0,0]) cylinder(h = 100, r = 4);
+                cylinder(h = 100, r = 4.5);
+                translate([5,0,0]) cylinder(h = 100, r = 4.5);
             }
+        }
+
+        // feet
+        translate([0,0,-SPACING_INSIDE]) rotate(CASE_ANGLE) translate(v = [0,0,-4.5]) union() {
+            translate(v = [7,7,0]) cylinder(h = 5, r = 3.5);
+            translate(v = [7,3.6*KEY_UNIT,0]) cylinder(h = 5, r = 3.5);
+            translate(v = [6.5*KEY_UNIT,-11,0]) cylinder(h = 5, r = 3.5);
+            translate(v = [5.5*KEY_UNIT,3.5*KEY_UNIT,0]) cylinder(h = 5, r = 3.5);
         }
     }
     // pins
