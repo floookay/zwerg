@@ -79,9 +79,9 @@ module case() {
         translate([6*KEY_UNIT, 0.75*KEY_UNIT, 0]) rotate([0,0,-ANGLE]) translate([-6,-0.5*KEY_UNIT,0])
         translate([0,0,-(PCB_CLEARANCE+PCB_THICKNESS-PCB_HEIGHT_OFFSET)]) rotate([-90,0,0]) union() {
             translate([1.5,-1,-3]) cube_rounded([20,5,25],r=1,center=true);
-            translate([-1,0,-3]) hull() {
-                cylinder(h = 100, r = 4.5);
-                translate([5,0,0]) cylinder(h = 100, r = 4.5);
+            translate([-1,0.5,-3]) hull() {
+                cylinder(h = 100, r = 3.5);
+                translate([5.5,0,0]) cylinder(h = 100, r = 3.5);
             }
         }
 
