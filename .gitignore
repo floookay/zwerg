@@ -25,3 +25,5 @@ pcb/production/backups/*
 
 # Exported BOM files
 *.xml
+
+*.code-workspace
