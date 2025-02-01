@@ -16,7 +16,7 @@ KLE: <https://www.keyboard-layout-editor.com/#/gists/f58560b496cb75689321efaddc9
 ## what you need
 
 - [ ] 2x zwerg pcbs (upload [zwerg.zip](./pcb/production/zwerg.zip) to a pcb manufacturer)
-- [ ] 2x [0xcb geminis](https://keeb.supply/products/0xcb-gemini)
+- [ ] 2x [0xCB geminis](https://keeb.supply/products/0xcb-gemini)
 - [ ] 50x switches
 - [ ] 50x diodes (1N4148W smd or tht)
 - [ ] 2x trrs jacks
