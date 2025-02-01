@@ -5,12 +5,11 @@
 The zwerg is a 3x6 split keyboard (technically 4x6 but there's no numrow).
 It's heavily inspired by [RGBKB.net's Sol 3](rgbkb.net/collections/sol-3) of which I own two and absolutely adore.
 
-![desk check](./images/desk-check.webp)
+![desk check](./images/desk-check.webp)  
+![side profile](./images/side-profile.webp)
 
 > [!Warning]  
 > Please note that this design only works with a slim usb-c cable/connector (5.5mm).
-
-![side profile](./images/side-profile.webp)
 
 KLE: <https://www.keyboard-layout-editor.com/#/gists/f58560b496cb75689321efaddc96187e>
 
@@ -32,4 +31,4 @@ KLE: <https://www.keyboard-layout-editor.com/#/gists/f58560b496cb75689321efaddc9
 
 Building this keyboard is pretty straight forward I think. The only thing you need to look out for is that you solder all components on the same side (same goes for the mirrored pcb). Don't over tighten the screw that attaches the pcb to the case, it's supposed be screwed in lightly.
 
-This keyboard is powered by qmk firmware, flash
+This keyboard is powered by qmk firmware, see [here for firmware (to be merged)](https://github.com/floookay/qmk_firmware/blob/zwerg/keyboards/zwerg/readme.md).
