@@ -3,7 +3,7 @@
 ![glam shot](./images/glam-shot.webp)
 
 The zwerg is a 3x6 split ortholinear 40% keyboard (technically 4x6 but there's no numrow).
-It's heavily inspired by [RGBKB.net's Sol 3](rgbkb.net/collections/sol-3) of which I own two and absolutely adore.
+It's heavily inspired by [RGBKB.net's Sol 3](https://rgbkb.net/collections/sol-3) of which I own two and absolutely adore.
 
 ![desk check](./images/desk-check.webp)  
 ![side profile](./images/side-profile.webp)
