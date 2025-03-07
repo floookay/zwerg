@@ -31,4 +31,4 @@ KLE: <https://www.keyboard-layout-editor.com/#/gists/f58560b496cb75689321efaddc9
 
 Building this keyboard is pretty straight forward I think. The only thing you need to look out for is that you solder all components on the same side (same goes for the mirrored pcb). Don't over tighten the screw that attaches the pcb to the case, it's supposed be screwed in lightly.
 
-This keyboard is powered by qmk firmware, see [here](https://github.com/qmk/qmk_firmware/tree/master/keyboards/zwerg).
+This keyboard is powered by qmk firmware, see [here](https://github.com/qmk/qmk_firmware/tree/master/keyboards/zwerg). Use the reset buttons on the Gemini for flashing the keyboard.
