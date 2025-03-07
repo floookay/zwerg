@@ -13,6 +13,8 @@ It's heavily inspired by [RGBKB.net's Sol 3](https://rgbkb.net/collections/sol-3
 
 KLE: <https://www.keyboard-layout-editor.com/#/gists/f58560b496cb75689321efaddc96187e>
 
+The typing and tenting angle can be freely adjusted in the OpenSCAD file. I printed mine with a typing angle of 2° and tenting of 5°.
+
 ## what you need
 
 - [ ] 2x zwerg pcbs (upload [zwerg.zip](./pcb/production/zwerg.zip) to a pcb manufacturer)
