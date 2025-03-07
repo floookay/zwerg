@@ -26,7 +26,7 @@ The typing and tenting angle can be freely adjusted in the OpenSCAD file. I prin
 - [ ] 2x M2 5-8mm screws
 - [ ] 10x 7x1.9mm o-rings
 - [ ] 8x 7x1mm bumpons
-- [ ] 2x 3d-printed zwerg case halves
+- [ ] 2x 3d-printed zwerg case halves (print with supports if needed)
 - [ ] *optional* 2x 3d-printed zwerg plates
 
 ![inside out](./images/inside-out.jpg)
